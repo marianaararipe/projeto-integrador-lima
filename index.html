@@ -8,11 +8,11 @@
     <link rel="icon" type="image/jpg" href="./images/logo.png" /> <!-- referente ícone de pagina -->
 
 
-    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
-    
-    
+
+
     <!--Links fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,20 +21,22 @@
 </head>
 
 <body>
-    <div id="container">
-        <header>
-            <!-- Começo do Header-->
-            <a href="#" class="logo">
-                Trip<span>Tour</span>
-            </a>
-            <ul class="links">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="sobre.html">Sobre nós</a></li>
-                <li><a href="pacotes.html">Pacotes</a></li>
-                <li><a href="contato.html">Contate-nos</a></li>
-            </ul>
- 
-        </header>
+    <header>
+        <!-- Começo do Header-->
+        <a href="#" class="logo">
+            Trip<span>Tour</span>
+        </a>
+        <ul class="links">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Pacotes</a></li>
+            <li><a href="#">Contate-nos</a></li>
+        </ul>
+
+    </header>
+
+
+    <main id="container">
 
         <div class="content-slides">
             <section class="home">
@@ -42,7 +44,7 @@
                     <h5>Vamos</h5>
                     <h1>Planejar sua <br> próxima viagem</h1>
                     <div class="line"></div>
-                    <p>Embarque em uma viagem de aventura, conheça destinos
+                    <p class="body-text">Embarque em uma viagem de aventura, conheça destinos
                         exóticos e culturas fascinantes, e crie memórias <br>
                         inesquecíveis com a ajuda da TripTour.</p>
                 </div>
@@ -89,17 +91,19 @@
         </div>
 
 
-        <section class="hoteis">
+        <section class="container hoteis">
             <div class="row">
                 <div class="col content-col">
-                    <h2>CONFORTO & BELEZA</h2>
-                    <div class="line"></div>
-                    <p>A TripTour, além de proporcionar pacotes extraordinários, te
+                    <h2 class="section-title">CONFORTO & BELEZA</h2>
+                    
+                    <div class="section-divider"></div>
+                    
+                    <p class="body-text">A TripTour, além de proporcionar pacotes extraordinários, te
                         auxilia a encontrar a hospedagem perfeita com os melhores preços.
                         confira em nossos pacotes as opções de hospedagens e venha criar
                         conosco as férias ideais para você.
                     </p>
-                    <a href="pacotes.html" class="btn">Nossos Pacotes</a>
+                    <a href="#" class="btn-primary">Nossos Pacotes</a>
                 </div>
                 <div class="col image-col">
                     <div class="imagem-galeria">
@@ -108,7 +112,7 @@
                         </figure>
 
                         <figure>
-                            <img src="./images/hotel-exterior.jpg" alt="">        
+                            <img src="./images/hotel-exterior.jpg" alt="">
                         </figure>
 
                         <figure>
@@ -125,9 +129,9 @@
         </section>
 
 
-        <section class="passeios-populares">
+        <section class="passeios-populares container">
             <div class="cards-text">
-                <h2>Passeios Populares</h2>
+                <h2 class="section-title">Passeios Populares</h2>
             </div>
 
             <div class="content-body-cards">
@@ -141,7 +145,7 @@
                         <div class="descricao">
                             <h3>Voos de Balão</h3>
                             <p>Tenha uma experiência única e admire a paisagem em uma perspectiva diferente.</p>
-                            <a href="pacotes.html" class="btn">Confira</a>
+                            <a href="#" class="btn-primary">Confira</a>
                         </div>
                     </div>
                     <div class="card">
@@ -153,7 +157,7 @@
                         <div class="descricao">
                             <h3>Férias nas Montanhas</h3>
                             <p>Hospeda-se em um chalé nas montanhas e desfrute da paz e beleza natural.</p>
-                            <a href="pacotes.html" class="btn">Confira</a>
+                            <a href="pacotes.html" class="btn-primary">Confira</a>
                         </div>
                     </div>
                     <div class="card">
@@ -165,7 +169,7 @@
                         <div class="descricao">
                             <h3>Férias na Praia</h3>
                             <p>As melhores praias e ilhas para você passar as férias da melhor maneira.</p>
-                            <a href="pacotes.html" class="btn">Confira</a>
+                            <a href="pacotes.html" class="btn-primary">Confira</a>
                         </div>
                     </div>
                     <div class="card">
@@ -177,7 +181,7 @@
                         <div class="descricao">
                             <h3>Cruzeiros</h3>
                             <p>Embarque em uma aventura pelo mar e visite ilhas e arquipélagos.</p>
-                            <a href="pacotes.html" class="btn">Confira</a>
+                            <a href="pacotes.html" class="btn-primary">Confira</a>
                         </div>
                     </div>
                 </div>
@@ -185,55 +189,48 @@
         </section>
 
 
+    </main>
+
+    <footer>
+        <div class="footer-box">
+            <h3>Agência</h3>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="#">Nossos Serviços</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos e Condições</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Ajuda</h3>
+            <a href="#">Perguntas Frequentes</a>
+            <a href="contato.html">Entre em Contato</a>
+            <a href="#">Opções de Pagamento</a>
+            <a href="#">Regras de remarcação, cancelamento e reembolso</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Loja Online</h3>
+            <a href="#">Minhas Viagens</a>
+            <a href="#">Passagens Aereas</a>
+            <a href="#">Aluguel de Carros</a>
+            <a href="#">Hospedagens</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Social</h3>
+            <div class="social">
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></i></a>
+                <a href="#"><i class='bx bxl-facebook'></i></i></a>
+            </div>
+        </div>
+        <section class="footer">
+            <h5>Mariana Araripe 2026 - &copyTodos os direitos reservados
+                <br>Trabalho Acadêmico - Sem fins lucrativos
+            </h5>
+        </section>
         
-        <footer>
-            <div class="footer-box">
-                <h3>Agência</h3>
-                <a href="sobre.html">Sobre Nós</a>
-                <a href="#">Nossos Serviços</a>
-                <a href="#">Política de Privacidade</a>
-                <a href="#">Termos e Condições</a>
-            </div>
-
-            <div class="footer-box">
-                <h3>Ajuda</h3>
-                <a href="#">Perguntas Frequentes</a>
-                <a href="contato.html">Entre em Contato</a>
-                <a href="#">Opções de Pagamento</a>
-                <a href="#">Regras de remarcação, cancelamento e reembolso</a>
-            </div>
-
-            <div class="footer-box">
-                <h3>Loja Online</h3>
-                <a href="#">Minhas Viagens</a>
-                <a href="#">Passagens Aereas</a>
-                <a href="#">Aluguel de Carros</a>
-                <a href="#">Hospedagens</a>
-            </div>
-
-            <div class="footer-box">
-                <h3>Social</h3>
-                <div class="social">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></i></a>
-                    <a href="#"><i class='bx bxl-facebook'></i></i></a>
-                </div>
-            </div>
-            <section class="footer">
-                <h5>Mariana Araripe 2026 - &copyTodos os direitos reservados
-                    <br>Trabalho Acadêmico - Sem fins lucrativos
-                </h5>
-            </section>
-            <div class="up">
-                <a href="index.html">
-                    <figure>
-                        <img src="./images/seta.png">
-                    </figure>
-                </a>
-            </div>
-        </footer>
-
-    </div>
+    </footer>
 </body>
 
 </html>

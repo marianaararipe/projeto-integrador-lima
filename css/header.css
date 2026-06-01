@@ -1,4 +1,4 @@
-@import url(global.css);
+@import url(styles.css);
 
 
 header{
@@ -17,7 +17,7 @@ header{
 }
 
 .logo{
-    font-size: 33px;
+    font-size: var(--font-size-title);
     color: var(--text-color);
     font-weight: 700;
     display: flex;
@@ -26,7 +26,7 @@ header{
     width: 10%;
 }
 span{
-    color: var(--main-color);
+    color: var( --primary-color);
 }
 
 .links{
@@ -36,16 +36,16 @@ span{
 }
 .links a{
     color: var(--text-color);
-    font-size: 25px;
+    font-size: 1.375rem;
     font-weight: 500;
     margin: 15px 22px;
     transition: all .2s ease;
     text-decoration: none;
 }
 .links a:hover{
-    color: var(--main-color);
+    color: var( --primary-color);
 }
 .links li.active a{
-    color: var(--main-color);
+    color: var( --primary-color);
 
 }
