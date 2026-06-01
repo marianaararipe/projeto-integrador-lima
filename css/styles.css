@@ -2,10 +2,28 @@
     /*declara variável global do css*/
     --text-color: #000;
     --text-color2: #fff;
-     --primary-color: #5333ED;
-     --primary-color-light: #907DF0;
-     --secondary-color: #26186E;
-     --secondary-color-light: #4129BA;
+    --primary-color: #5333ED;    /* contraste em relação ao fundo: 6.85:1 */
+    --primary-color-light: #E6DBFD; 
+
+    /* D1C3FB 
+        -> América (57484A):  passa
+        -> Europa (6A6965): passa no Large Text, nao no Normal
+        -> Ásia (0E2124):  passa
+        -> Oceania (4D575F):  passa
+        -> África (452F1E):  passa
+        -> Antártida (66686C): passa no Large Text, nao no Normal
+    */
+    /* E6DBFD
+        -> América: passa 
+        -> Europa: passa no Large Text, nao no Normal
+        -> Ásia: passa 
+        -> Oceania: passa 
+        -> África: passa
+        -> Antártida: passa no Large Text, nao no Normal
+         */
+
+    --secondary-color: #26186E;  /* contraste em relação ao fundo: 14.6:1 */
+    --secondary-color-light: #4129BA; /* contraste em relação ao fundo: 9.32:1 */
 
     --font-size-title-header: 4.236rem;
     --font-size-title: 2.618rem;
@@ -16,10 +34,6 @@
 
     --radius: 16px;
 
-    --h1-font: 7vmin;
-    --h1-font-bold: 9vmin;
-    --h2-font: 4vmin;
-    --p-font: 3vmin;
 }
 
 * {
@@ -41,10 +55,13 @@ body {
 }
 
 
+main {
+    width: 100%;
+}
 
-#container{
+.container {
     width: min(80%, 1400px);
-    margin: 0 auto;
+    margin: 12rem auto;
 }
 
 .btn-primary {
@@ -54,7 +71,7 @@ body {
 
     padding: 0.8rem 2rem;
 
-    background-color: var( --secondary-color-light);
+    background-color: var(--secondary-color-light);
     color: var(--text-color2);
 
     border-radius: var(--radius);
@@ -65,8 +82,9 @@ body {
     cursor: pointer;
     transition: 0.3s
 }
-.btn-primary:hover{
-    background-color: var( --primary-color);
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
 }
 
 
@@ -74,7 +92,7 @@ body {
     width: 150px;
     height: 4px;
 
-    background: var( --primary-color);
+    background: var(--primary-color);
 
     border-radius: 999px;
 }
@@ -83,8 +101,9 @@ body {
     font-size: var(--font-size-title);
     font-weight: 700;
     line-height: 1.2;
-    color: var( --secondary-color);
+    color: var(--secondary-color);
 }
+
 .body-text {
     font-size: var(--font-size-paragraph);
     line-height: 1.6;
@@ -97,61 +116,81 @@ body {
 
 /*Inicio SLIDES*/
 /*slides*/
-.content-slides{
+.content-slides {
     width: 100%;
     overflow: hidden;
     position: relative;
 }
+.content-slides::after {
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 96%;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
 
-.slides{
+.slides {
     display: flex;
     width: 600%;
     height: 800px;
 }
-.slide{
+
+.slide {
     width: 16.66%;
     transition: 0.6s;
 }
-.slide img{
+
+.slide img {
     width: 100%;
     height: 800px;
     object-fit: cover;
     object-position: center;
 }
-#slide1:checked ~ .s1{
+
+#slide1:checked~.s1 {
     margin-left: 0;
 }
-#slide2:checked ~ .s1{
+
+#slide2:checked~.s1 {
     margin-left: -16.66%;
 }
-#slide3:checked ~ .s1{
+
+#slide3:checked~.s1 {
     margin-left: -33.32%;
 }
-#slide4:checked ~ .s1{
+
+#slide4:checked~.s1 {
     margin-left: -49.98%;
 }
-#slide5:checked ~ .s1{
+
+#slide5:checked~.s1 {
     margin-left: -66.64%;
 }
-#slide6:checked ~ .s1{
+
+#slide6:checked~.s1 {
     margin-left: -83.3%;
 }
 
 
 
-.navigation{
+.navigation {
     position: relative;
     bottom: 50px;
-    margin-right: 2rem;
 
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    
+    justify-content: center;
+
     gap: 12px;
+    z-index: 2;
 }
-.bar{
-    min-width: 80px;
+
+.bar {
+    width: 100px;
     padding: 0.4rem 1.2rem;
 
     display: flex;
@@ -163,55 +202,58 @@ body {
     border-radius: var(--radius);
     color: #fff;
 
-    cursor: pointer ;
+    cursor: pointer;
     transition: 0.4s;
 }
+
 .bar:hover {
     background-color: #fff;
     color: black;
 }
-input[type=radio]{
+
+input[type=radio] {
     display: none;
 }
+
 /*Fim SLIDES*/
 
 
 /* inicio SECTION-HOME */
-.home{
+.home {
     position: absolute;
+    z-index: 2;
+
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 250px 13%;
-    height: auto;
+    height: 90%;
 }
 
-.home-text h5{
-    font-size: var(--font-size-paragraph);
-    font-weight: 600;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 6px;
-    color: var( --primary-color);
-}
-.home-text h1{
+
+
+.home-text h1 {
     font-size: var(--font-size-title);
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     color: var(--text-color2);
 }
-.line{
+
+.line {
     width: 150px;
     height: 4px;
-    background: var( --primary-color);
+    background: var(--primary-color-light);
     margin-bottom: 15px;
     border-radius: 10px;
 }
-.home-text p{
+
+.home-text p {
     font-weight: 500;
     color: var(--text-color2);
+    font-size: 20px;
 }
+
 /*fim SECTION-HOME (texto)*/
 
 
@@ -219,23 +261,24 @@ input[type=radio]{
 
 
 /*inicio HOTEIS*/
-.hoteis{
-    width: 100%;
+.hoteis {
     margin: 80px auto;
 }
 
-.row{
+.row {
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: space-between;
 }
-.row .col{
+
+.row .col {
     display: flex;
     flex-direction: column;
     align-items: start;
 }
-.content-col{
+
+.content-col {
     width: 40%;
     text-align: start;
     gap: 2rem;
@@ -243,22 +286,23 @@ input[type=radio]{
     align-items: flex-start;
 }
 
-.image-col{
+.image-col {
     width: 55%;
 }
 
-.col p{
+.col p {
     font-size: var(--font-size-paragraph);
     padding: 0;
     line-height: 1.4rem;
 }
 
-.hoteis .imagem-galeria{
+.hoteis .imagem-galeria {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     align-items: center;
 }
+
 .imagem-galeria img {
     width: 350px;
     height: 300px;
@@ -273,14 +317,13 @@ input[type=radio]{
 
 
 /* PASSEIOS SECTION */
-.passeios-populares {
-    margin: 15rem 0;
-}
+
 .cards-text {
     justify-content: center;
     margin: 30px auto;
     align-items: center;
 }
+
 .cards-text .section-title {
     text-align: center;
 }
@@ -291,70 +334,81 @@ input[type=radio]{
     align-items: center;
     justify-content: center;
 }
+
 .content-cards {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .card {
     width: 280px;
-    height: 360px;
+    height: 380px;
 
-    background-color: #fff;
-    display: flex;
-    
-    padding: 2rem 1rem;
     position: relative;
-    transition: 0.5s all ease-in-out;
-}
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+    overflow: hidden;
 
-    width: 100%;
-    height: 100%;
-    background-color: rgba(38, 24, 110, 0.8);
+    border-radius: var(--radius);
+    border: 2px solid var(--primary-color);
 
-    z-index: 2;
-    opacity: 0;
-    transition: 0.5 all;
+    border: 1px solid #dcdcdc;
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card-image{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
 
-    
-}
-.card:hover::before{
-    opacity: 1;
-}
-.card img {
+.card-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
 }
 
-.descricao {
-    position: relative;
-    color: var(--text-color2);
-    z-index: 3;
-    opacity: 0;   /* deixa o texto invisivel */
+.card-footer{
+    height: 80px;
 
-    transform: translateY(30px);
-    transition: 0.5s all;
-    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    border-top: 1px solid #dcdcdc;
 }
-.card:hover .descricao {
-    opacity: 1;
-    transform: translateY(0);
-}
-.descricao h3 {
+
+.card-footer h3 {
     font-size: var(--font-size-subtitle);
-    margin-bottom: 1.2rem;
+    color: var(--secondary-color);
 }
-.descricao p {
-    font-size: var(--font-size-paragraph);
-    letter-spacing: 1px;
-    margin-bottom: 1.2rem;
+.descricao{
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    color: var(--text-color2);
+    line-height: 1.4;
+
+    padding: 1.5rem;
+
+    background: rgba(38, 24, 110, 0.9);
+
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+.card-image:hover .descricao{
+    opacity: 1;
 }
