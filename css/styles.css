@@ -4,15 +4,6 @@
     --text-color2: #fff;
     --primary-color: #5333ED;    /* contraste em relação ao fundo: 6.85:1 */
     --primary-color-light: #E6DBFD; 
-
-    /* D1C3FB 
-        -> América (57484A):  passa
-        -> Europa (6A6965): passa no Large Text, nao no Normal
-        -> Ásia (0E2124):  passa
-        -> Oceania (4D575F):  passa
-        -> África (452F1E):  passa
-        -> Antártida (66686C): passa no Large Text, nao no Normal
-    */
     /* E6DBFD
         -> América: passa 
         -> Europa: passa no Large Text, nao no Normal
@@ -20,7 +11,7 @@
         -> Oceania: passa 
         -> África: passa
         -> Antártida: passa no Large Text, nao no Normal
-         */
+    */
 
     --secondary-color: #26186E;  /* contraste em relação ao fundo: 14.6:1 */
     --secondary-color-light: #4129BA; /* contraste em relação ao fundo: 9.32:1 */
@@ -342,8 +333,8 @@ input[type=radio] {
 }
 
 .card {
-    width: 280px;
-    height: 380px;
+    width: 320px;
+    height: 420px;
 
     position: relative;
     overflow: hidden;
@@ -357,7 +348,7 @@ input[type=radio] {
 }
 .card-image{
     position: relative;
-    height: 300px;
+    height: 80%;
     overflow: hidden;
 }
 

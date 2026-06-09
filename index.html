@@ -5,7 +5,7 @@
     <title>TripTour</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpg" href="./images/logo.png" /> <!-- referente ícone de pagina -->
+    <link rel="icon" type="image/jpg" href="./images/Triptour-logo.png" /> <!-- referente ícone de pagina -->
 
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -26,12 +26,14 @@
         <a href="#" class="logo">
             Trip<span>Tour</span>
         </a>
-        <ul class="links">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="#">Sobre nós</a></li>
-            <li><a href="#">Pacotes</a></li>
-            <li><a href="#">Contate-nos</a></li>
-        </ul>
+        <nav>
+            <ul class="links">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Pacotes</a></li>
+                <li><a href="#">Contate-nos</a></li>
+            </ul>
+        </nav>
 
     </header>
 
@@ -44,7 +46,7 @@
                     <h1>Planeje sua <br> próxima viagem</h1>
                     <div class="line"></div>
                     <p class="body-text">Embarque em uma viagem de aventura, conheça destinos
-                        exóticos e culturas <br> fascinantes, e crie memórias 
+                        exóticos e culturas <br> fascinantes, e crie memórias
                         inesquecíveis com a ajuda da TripTour.</p>
                 </div>
             </section>
@@ -59,45 +61,44 @@
                 <input type="radio" name="slide" id="slide6">
 
                 <figure class="slide s1">
-                    <img class="slide" src="./images/slides/nova_iorque.jpg" 
+                    <img class="slide" src="./images/slides/nova_iorque.jpg"
                         alt="Empire State Building, em Nova Iorque, Estados Unidos">
                 </figure>
 
                 <figure class="slide">
-                    <img class="slide" src="./images/slides/rome-europe.jpg" 
-                        alt="Ponte Vecchio, em Florença, Itália">
+                    <img class="slide" src="./images/slides/rome-europe.jpg" alt="Ponte Vecchio, em Florença, Itália">
                 </figure>
 
                 <figure class="slide">
-                    <img class="slide" src="./images/slides/muralha_china.jpg" 
+                    <img class="slide" src="./images/slides/muralha_china.jpg"
                         alt="Trecho da Muralha da China sobre montanhas">
                 </figure>
 
                 <figure class="slide">
-                    <img class="slide" src="./images/slides/nova_zelandia.jpg" 
+                    <img class="slide" src="./images/slides/nova_zelandia.jpg"
                         alt="Lago Wakatipu em Queenstown, Nova Zelândia">
                 </figure>
 
                 <figure class="slide">
-                    <img class="slide" src="./images/slides/sul_africa.jpg" 
+                    <img class="slide" src="./images/slides/sul_africa.jpg"
                         alt="Costa de Camps Bay, na Cidade do Cabo, África do Sul">
                 </figure>
 
                 <figure class="slide">
-                    <img class="slide" src="./images/slides/antartida.jpg" 
+                    <img class="slide" src="./images/slides/antartida.jpg"
                         alt="Montanhas cobertas de neve na Antárdida">
                 </figure>
 
             </div>
 
-            <div class="navigation">
+            <nav class="navigation">
                 <label class="bar" for="slide1">América</label>
                 <label class="bar" for="slide2">Europa</label>
                 <label class="bar" for="slide3">Ásia</label>
                 <label class="bar" for="slide4">Oceania</label>
                 <label class="bar" for="slide5">África</label>
                 <label class="bar" for="slide6">Antártida</label>
-            </div>
+            </nav>
 
         </div>
 
@@ -116,25 +117,26 @@
                     </p>
                     <a href="#" class="btn-primary">Nossos Pacotes</a>
                 </div>
+
                 <div class="col image-col">
                     <div class="imagem-galeria">
                         <figure>
-                            <img src="./images/hoteis-section/hotel-cafe.jpg" 
+                            <img src="./images/hoteis-section/hotel-cafe.jpg"
                                 alt="Café da manhã servido em um hotel, com pães doces e salgados, frutas e suco.">
                         </figure>
 
                         <figure>
-                            <img src="./images/hoteis-section/hotel-exterior.jpg" 
+                            <img src="./images/hoteis-section/hotel-exterior.jpg"
                                 alt="Área de lazer no exterior de um hotel beira mar, com mesas, cadeiras e guarda sol.">
                         </figure>
 
                         <figure>
-                            <img src="./images/hoteis-section/hotel-piscina.jpg" 
+                            <img src="./images/hoteis-section/hotel-piscina.jpg"
                                 alt="Fachada do exterior de um hotel, com piscina, cadeiras de sol e palmeiras.">
                         </figure>
 
                         <figure>
-                            <img src="./images/hoteis-section/hotel-room.jpg" 
+                            <img src="./images/hoteis-section/hotel-room.jpg"
                                 alt="Quarto de hotel confortável com mobília moderna.">
                         </figure>
 
@@ -157,10 +159,10 @@
                         <figure class="card-image">
                             <img src="./images/categorias-passeio/passeio_balao.jpg" alt="Passeio de balão">
 
-                            <div class="descricao">
+                            <figcaption class="descricao">
                                 <p>Tenha uma experiência única e admire a paisagem em uma perspectiva diferente.</p>
                                 <a href="#" class="btn-primary">Confira</a>
-                            </div>
+                            </figcaption>
                         </figure>
 
                         <div class="card-footer">
@@ -176,10 +178,10 @@
                         <figure class="card-image">
                             <img src="./images/categorias-passeio/chale_montanhas.jpg" alt="Passeio de balão">
 
-                            <div class="descricao">
+                            <figcaption class="descricao">
                                 <p>Hospeda-se em um chalé nas montanhas e desfrute da paz e beleza natural.</p>
                                 <a href="#" class="btn-primary">Confira</a>
-                            </div>
+                            </figcaption>
                         </figure>
 
                         <div class="card-footer">
@@ -194,10 +196,10 @@
                         <figure class="card-image">
                             <img src="./images/categorias-passeio/beach.jpg" alt="Passeio de balão">
 
-                            <div class="descricao">
+                            <figcaption class="descricao">
                                 <p>As melhores praias e ilhas para você passar as férias da melhor maneira.</p>
                                 <a href="#" class="btn-primary">Confira</a>
-                            </div>
+                            </figcaption>
                         </figure>
 
                         <div class="card-footer">
@@ -212,10 +214,10 @@
                         <figure class="card-image">
                             <img src="./images/categorias-passeio/cruzeiro.jpg" alt="Passeio de balão">
 
-                            <div class="descricao">
+                            <figcaption class="descricao">
                                 <p>Embarque em uma aventura pelo mar e visite ilhas e arquipélagos.</p>
                                 <a href="#" class="btn-primary">Confira</a>
-                            </div>
+                            </figcaption>
                         </figure>
 
                         <div class="card-footer">
@@ -223,8 +225,6 @@
                         </div>
 
                     </div>
-
-
 
                 </div>
             </div>
@@ -234,43 +234,49 @@
     </main>
 
     <footer>
-        <div class="footer-box">
-            <h3>Agência</h3>
-            <a href="sobre.html">Sobre Nós</a>
-            <a href="#">Nossos Serviços</a>
-            <a href="#">Política de Privacidade</a>
-            <a href="#">Termos e Condições</a>
+
+        <div class="footer-links">
+            <nav class="footer-box">
+                <h3>Agência</h3>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="#">Nossos Serviços</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos e Condições</a>
+            </nav>
+
+            <nav class="footer-box">
+                <h3>Ajuda</h3>
+                <a href="#">Perguntas Frequentes</a>
+                <a href="contato.html">Entre em Contato</a>
+                <a href="#">Opções de Pagamento</a>
+                <a href="#">Regras de remarcação, cancelamento e reembolso</a>
+            </nav>
+
+            <nav class="footer-box">
+                <h3>Loja Online</h3>
+                <a href="#">Minhas Viagens</a>
+                <a href="#">Passagens Aéreas</a>
+                <a href="#">Aluguel de Carros</a>
+                <a href="#">Hospedagens</a>
+            </nav>
+
+            <nav class="footer-box">
+                <h3>Social</h3>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                </div>
+            </nav>
         </div>
 
-        <div class="footer-box">
-            <h3>Ajuda</h3>
-            <a href="#">Perguntas Frequentes</a>
-            <a href="contato.html">Entre em Contato</a>
-            <a href="#">Opções de Pagamento</a>
-            <a href="#">Regras de remarcação, cancelamento e reembolso</a>
-        </div>
-
-        <div class="footer-box">
-            <h3>Loja Online</h3>
-            <a href="#">Minhas Viagens</a>
-            <a href="#">Passagens Aereas</a>
-            <a href="#">Aluguel de Carros</a>
-            <a href="#">Hospedagens</a>
-        </div>
-
-        <div class="footer-box">
-            <h3>Social</h3>
-            <div class="social">
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></i></a>
-                <a href="#"><i class='bx bxl-facebook'></i></i></a>
-            </div>
-        </div>
-        <section class="footer">
-            <h5>Mariana Araripe 2026 - &copyTodos os direitos reservados
-                <br>Trabalho Acadêmico - Sem fins lucrativos
+        <div class="footer-bottom">
+            <h5>
+                Mariana Araripe 2026 - &copy; Todos os direitos reservados
+                <br>
+                Trabalho Acadêmico - Sem fins lucrativos
             </h5>
-        </section>
+        </div>
 
     </footer>
 </body>
